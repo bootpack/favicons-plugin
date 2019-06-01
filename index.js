@@ -66,8 +66,16 @@ FaviconsPlugin.prototype.apply = function (compiler) {
 
     // webpack 4
     if (compiler.hooks) {
+      var tapped = 0;
       compiler.hooks.compilation.tap('FaviconsPlugin', function (cmpp) {
-        cmpp.hooks.htmlWebpackPluginBeforeHtmlProcessing.tapAsync('favicons-plugin', addFaviconsToHtml);
+        compiler.hooks.compilation.tap('HtmlWebpackPluginHooks', function () {
+          if (!tapped++) {
+            cmpp.hooks.htmlWebpackPluginBeforeHtmlProcessing.tapAsync(
+              'favicons-plugin',
+              addFaviconsToHtml
+            );
+          }
+        });
       });
     } else {
       compiler.plugin('compilation', function (compilation) {
