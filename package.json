@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "lint": "semistandard",
-    "prepublish": "npm run test",
     "test": "npm run lint"
   },
   "repository": {
