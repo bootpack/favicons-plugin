@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "favicons": "^4.8.3",
-    "loader-utils": "^0.2.14",
+    "loader-utils": "^1.2.3",
     "lodash": "^4.11.1"
   },
   "peerDependencies": {
