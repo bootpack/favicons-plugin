@@ -39,7 +39,7 @@
     "express": "^4.13.4",
     "html-webpack-plugin": "^2.16.0",
     "memory-fs": "^0.3.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.3",
     "rimraf": "^2.5.2",
     "semistandard": "^9.1.0",
     "webpack": "^1.13.0",
