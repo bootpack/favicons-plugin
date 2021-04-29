@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: America/New_York
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: dir-compare
+    versions:
+    - 3.0.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: favicons
+    versions:
+    - 6.2.0
